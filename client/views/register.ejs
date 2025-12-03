@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - BrainBolt</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" href="/css/register.css" />
+</head>
+
+<body class="bg-light min-vh-100 d-flex align-items-center justify-content-center">
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="card shadow p-4">
+          <h3 class="text-center mb-4">Create Account</h3>
+
+          <div id="register-error" class="alert alert-danger d-none"></div>
+          <div id="register-success" class="alert alert-success d-none"></div>
+
+          <form id="register-form">
+            <div class="mb-3">
+              <label class="form-label">Username</label>
+              <input type="text" id="username" class="form-control" required minlength="3" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input type="email" id="email" class="form-control" required />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" id="password" class="form-control" required minlength="6" />
+            </div>
+
+            <button id="register-btn" type="submit" class="btn btn-primary w-100">
+              Register
+            </button>
+
+            <p class="text-center mt-3 mb-0">
+              Already have an account? <a href="/login">Login</a>
+            </p>
+            <p class="text-center mt-2 mb-0">
+              <a href="/">← Back to Home</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Only register.js here -->
+  <script src="/js/register.js"></script>
+</body>
+</html>

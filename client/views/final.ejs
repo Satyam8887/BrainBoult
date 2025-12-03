@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Result - BrainBolt</title>
+
+  <!-- Bootstrap (optional, for basic button/reset styles) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  />
+
+  <!-- Custom result page styles -->
+  <link rel="stylesheet" href="/css/final.css" />
+</head>
+<body>
+  <div class="result-bg">
+    <!-- animated blobs background -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="noise-overlay"></div>
+  </div>
+
+  <main class="result-wrapper">
+    <section class="result-card">
+      <!-- Logo / heading -->
+      <header class="result-header">
+        <div class="logo-pill">
+          <span class="logo-icon">🌍</span>
+          <span class="logo-text">BrainBolt</span>
+        </div>
+      </header>
+
+      <!-- Trophy -->
+      <div class="trophy-wrapper">
+        <div class="trophy-glow"></div>
+        <div class="trophy-icon">🏆</div>
+      </div>
+
+      <!-- Title + score -->
+      <h1 class="end-title">Quiz Completed!</h1>
+
+      <p class="end-subtitle">
+        You scored
+        <span class="end-score"><%= score %></span>
+        out of
+        <span id="total-questions-label"><%= totalQuestions %></span>
+      </p>
+
+      <!-- Performance box -->
+      <div class="performance-box">
+        <p class="performance-label">Performance</p>
+        <p class="performance-text">
+          <%= performanceMessage %>
+        </p>
+      </div>
+
+      <!-- Actions -->
+      <div class="result-actions">
+        <a href="/home" class="btn btn-light btn-lg w-100 mb-2 btn-play-again">
+          Play Again
+        </a>
+        <a href="/" class="btn btn-outline-light w-100 btn-back-home">
+          ← Back to Welcome
+        </a>
+      </div>
+
+      <footer class="result-footer">
+        © <span class="brand">BrainBolt</span> • Powered by world capitals
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
